@@ -4,7 +4,7 @@ LABEL maintainer="Animals4life"
 
 COPY index.html /usr/share/nginx/html
 
-COPY containerandcat*.jpg /usr/share/nginx/html/
+## COPY containerandcat*.jpg /usr/share/nginx/html/
 
 EXPOSE 80
 
