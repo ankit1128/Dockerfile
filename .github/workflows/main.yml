@@ -21,9 +21,11 @@ jobs:
           api-key: ${{ secrets.BC_API_KEY }}
 
       - name: Build the image
+        if: always()
         run: docker build -t $IMAGE_NAME .
 
       - name: Prisma Cloud image scan
+        if: always()
         id: scan
         uses: PaloAltoNetworks/prisma-cloud-scan@v1
         with:
